@@ -4,10 +4,8 @@
 	namespace app\controllers;
 	
 	
-	use yii\web\Controller;
-	
 	class MyController
-		extends Controller
+		extends AppController
 	{
 		public function actionIndex($id = null)
 		{
