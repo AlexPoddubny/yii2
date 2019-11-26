@@ -9,10 +9,22 @@
 	class PostController
 		extends AppController
 	{
-		public function actionTest()
+		
+		public $layout = 'basic';
+		
+		public function actionIndex()
 		{
-			$names = ['Ivan', 'Petro', 'Olexiy'];
-			$dump = $this->debug($names);
-			return $this->render('test', compact('dump'));
+			$data = '';
+//			if (Yii::$app->request->isAjax){
+//				$data = $this->debug($_GET);
+//			}
+			return $this->render('test', compact('data'));
+		}
+		
+		public function actionShow()
+		{
+//			$this->layout = 'basic';
+//			$dump = $this->debug(Yii::$app);
+			return $this->render('show');
 		}
 	}
