@@ -1,5 +1,6 @@
 <h1>Show Action</h1>
 <button class="btn btn-success" id="btn">Click me!</button>
+
 <?php
 	$js = <<<JS
 		$('#btn').on('click', function(){
@@ -15,7 +16,7 @@
 				}
 			});
 		});
-	JS;
+JS;
 	
 	$this->registerJs($js);
 ?>

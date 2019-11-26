@@ -14,11 +14,12 @@
 		
 		public function actionIndex()
 		{
-			$data = '';
-//			if (Yii::$app->request->isAjax){
-//				$data = $this->debug($_GET);
-//			}
-			return $this->render('test', compact('data'));
+//			$data = '';
+			if (Yii::$app->request->isAjax){
+				debug(Yii::$app->request->post());
+				return 'test';
+			}
+			return $this->render('test');
 		}
 		
 		public function actionShow()
