@@ -24,7 +24,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php $this->registerCsrfMetaTags() ?>
 	<?php $this->head() ?>
-	<title>Document</title>
+	<title><?= $this->title ?></title>
 </head>
 <body>
 <?php $this->beginBody() ?>

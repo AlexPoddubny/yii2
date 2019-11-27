@@ -1,3 +1,7 @@
+<?php
+//	$this->title = 'Article';
+?>
+
 <h1>Show Action</h1>
 <button class="btn btn-success" id="btn">Click me!</button>
 
