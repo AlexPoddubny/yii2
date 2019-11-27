@@ -1,6 +1,6 @@
 <?php
 	
-//	function debug($arr)
-//	{
-//		return '<pre>' . print_r($arr, true) . '</pre>';
-//	}
+	function debug($arr)
+	{
+		echo '<pre>' . print_r($arr, true) . '</pre>';
+	}

@@ -4,6 +4,7 @@
 	namespace app\controllers;
 	
 	
+	use app\models\TestForm;
 	use Yii;
 	
 	class PostController
@@ -14,12 +15,23 @@
 		
 		public function actionIndex()
 		{
-			$data = '';
-			if (Yii::$app->request->isAjax){
-				$data = $this->debug(Yii::$app->request->post());
-				return 'test';
+//			if (Yii::$app->request->isAjax){
+//				debug(Yii::$app->request->post());
+//				return 'test';
+//			}
+			$model = new TestForm();
+			if ($model->load(Yii::$app->request->post())){
+//				debug($model);
+//				die;
+				if ($model->validate()){
+					Yii::$app->session->setFlash('success', 'Data uploaded');
+					return $this->refresh();
+				} else {
+					Yii::$app->session->setFlash('error', 'Data not uploaded');
+				}
 			}
-			return $this->render('test', compact('data'));
+			$this->view->title = 'All Articles';
+			return $this->render('index', compact('model'));
 		}
 		
 		public function actionShow()
