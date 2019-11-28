@@ -37,7 +37,7 @@
 		
 		public function actionShow()
 		{
-			$cats = Category::find()->all();
+			$cats = Category::find()->where(['parent' => 691])->all();
 			return $this->render('show', compact('cats'));
 		}
 	}
