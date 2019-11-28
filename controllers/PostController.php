@@ -4,6 +4,7 @@
 	namespace app\controllers;
 	
 	
+	use app\models\Category;
 	use app\models\TestForm;
 	use Yii;
 	
@@ -36,8 +37,7 @@
 		
 		public function actionShow()
 		{
-//			$this->layout = 'basic';
-//			$dump = $this->debug(Yii::$app);
-			return $this->render('show');
+			$cats = Category::find()->all();
+			return $this->render('show', compact('cats'));
 		}
 	}

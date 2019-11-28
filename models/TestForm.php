@@ -29,7 +29,7 @@
 				[['name', 'email'], 'required'],
 				['email', 'email'],
 				['name', 'string', 'length' => [2, 20], 'tooShort' => 'Мало',
-					'tooLong' => 'Много'],
+					'tooLong' => 'Многабукав'],
 				['name', 'trim'],
 				['name', 'myRule'],
 				['text', 'safe'],
