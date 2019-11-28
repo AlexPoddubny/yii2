@@ -1,10 +1,20 @@
 <?php
 //	$this->title = 'Article';
+
 ?>
 
 <h1>Show Action</h1>
+<?php use app\controllers\AppController;
+	
+	echo AppController::debug($cats);
+	
+?>
 
-<?php debug($cats) ?>
+<?php //debug($cats)
+	foreach ($cats as $c){
+		echo $c->title . '<br>';
+	}
+?>
 <!--<button class="btn btn-success" id="btn">Click me!</button>-->
 <!---->
 <?php
