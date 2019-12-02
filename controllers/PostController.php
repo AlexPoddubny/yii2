@@ -20,7 +20,11 @@
 //				debug(Yii::$app->request->post());
 //				return 'test';
 //			}
-			$model = new TestForm();
+			
+			$model = TestForm::findOne(7);
+//			AppController::debug($post);
+			
+			//$model = new TestForm();
 //
 //			$model->name = 'Автор';
 //			$model->email = 'mail@mail.com';

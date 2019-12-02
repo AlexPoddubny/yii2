@@ -4,6 +4,10 @@
 ?>
 <div class="container">
 	<h1>Action Test</h1>
+<!--	--><?php
+//	use app\controllers\AppController;
+//	echo AppController::debug($post);
+//	?>
 	<?php if (Yii::$app->session->hasFlash('success')) : ?>
 		<div class="alert alert-success alert-dismissible" role="alert">
 			<?= Yii::$app->session->getFlash('success'); ?>
