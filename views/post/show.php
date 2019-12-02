@@ -1,6 +1,9 @@
 <h1>Show Action</h1>
 <?php
 	use app\controllers\AppController;
+	use app\widgets\MyWidget;
+	
+	echo MyWidget::widget(['name' => 'Alex']);
 //	echo AppController::debug($cats);
 //	echo count($cats[0]->products);
 //	echo AppController::debug($cats);
