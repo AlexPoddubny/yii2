@@ -12,7 +12,7 @@
 		public static function tableName()
 		{
 			$name = strtolower(static::className());
-			$name = substr($name, strripos($name, '\\') + 1, strlen($name));
+			$name = substr($name, strripos($name, '\\') + 1);
 			$l = substr($name, -1);
 			switch ($l){
 				case 's':

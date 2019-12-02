@@ -4,15 +4,14 @@
 	namespace app\models;
 	
 	
-	use yii\base\Model;
-	
 	class TestForm
-		extends Model
+		extends BaseModel
 	{
 		
-		public $name;
-		public $email;
-		public $text;
+		public static function tableName()
+		{
+			return 'posts';
+		}
 		
 		public function attributeLabels()
 		{
@@ -26,21 +25,8 @@
 		public function rules()
 		{
 			return [
-				[['name', 'email'], 'required'],
+				[['name', 'text'], 'required'],
 				['email', 'email'],
-				['name', 'string', 'length' => [2, 20], 'tooShort' => 'Мало',
-					'tooLong' => 'Многабукав'],
-				['name', 'trim'],
-				['name', 'myRule'],
-				['text', 'safe'],
 			];
 		}
-		
-		public function myRule($attr)
-		{
-			if (!in_array($this->$attr, ['hello', 'world'])){
-				$this->addError($attr, 'Wrong!');
-			}
-		}
-		
 	}
