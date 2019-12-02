@@ -7,13 +7,8 @@
 	use yii\db\ActiveRecord;
 	
 	class Product
-		extends ActiveRecord
+		extends BaseModel
 	{
-		public static function tableName()
-		{
-			return 'products';
-		}
-		
 		public function getCategories()
 		{
 			return $this->hasOne(Category::className(), ['id' => 'parent']);

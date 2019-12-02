@@ -6,22 +6,25 @@
 	
 	use yii\db\ActiveRecord;
 	
-	class BaseModel
+	abstract class BaseModel
 		extends ActiveRecord
 	{
 		public static function tableName()
 		{
 			$name = strtolower(static::className());
+			$name = substr($name, strripos($name, '\\') + 1, strlen($name));
 			$l = substr($name, -1);
 			switch ($l){
 				case 's':
-					return $name . 'es';
+					$name .= 'es';
 					break;
 				case 'y':
-					return substr($name, strlen($name) - 1) . 'ies';
+					$name = substr($name, 0, strlen($name) - 1) . 'ies';
 					break;
 				default:
-					return $name . 's';
+					$name .= 's';
+					break;
 			}
+			return $name;
 		}
 	}
