@@ -6,16 +6,16 @@
 	
 	use yii\db\ActiveRecord;
 	
-	class Category
+	class Product
 		extends ActiveRecord
 	{
 		public static function tableName()
 		{
-			return 'categories';
+			return 'products';
 		}
 		
-		public function getProducts()
+		public function getCategories()
 		{
-			return $this->hasMany(Product::className(), ['parent' => 'id']);
+			return $this->hasOne(Category::className(), ['id' => 'parent']);
 		}
 	}

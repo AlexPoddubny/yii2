@@ -1,9 +1,19 @@
 <h1>Show Action</h1>
 <?php
 	use app\controllers\AppController;
-	echo AppController::debug($cats);
+//	echo AppController::debug($cats);
+//	echo count($cats[0]->products);
+//	echo AppController::debug($cats);
 	foreach ($cats as $c){
-		echo $c->title . '<br>';
+		echo '<ul>';
+			echo '<li>' . 'id: ' . $c->id . ': ' . $c->title . '</li>';
+//			$products = $c->products;
+			foreach ($c->products as $p){
+				echo '<ul>';
+					echo '<li>' . $p->title . '</li>';
+				echo '</ul>';
+			}
+		echo '</ul>';
 	}
 ?>
 <!--<button class="btn btn-success" id="btn">Click me!</button>-->
