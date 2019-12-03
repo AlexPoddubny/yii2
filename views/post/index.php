@@ -31,14 +31,15 @@
 					'id' => 'myForm',
 				]
 			]);
-		echo $form->field($model, 'name');
-		echo $form->field($model, 'email')
-			->input('email');
-		echo $form->field($model, 'text')
-			->textarea(['rows' => 10]);
-		echo Html::submitButton('Отправить', [
-				'class' => 'btn btn-success'
-			]);
+			echo $form->field($model, 'name');
+			echo $form->field($model, 'email')
+				->input('email');
+			echo yii\jui\DatePicker::widget(['name' => 'attributeName']);
+			echo $form->field($model, 'text')
+				->textarea(['rows' => 10]);
+			echo Html::submitButton('Отправить', [
+					'class' => 'btn btn-success'
+				]);
 		ActiveForm::end();
 	?>
 </div>

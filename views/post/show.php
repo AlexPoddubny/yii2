@@ -4,7 +4,7 @@
 	use app\widgets\MyWidget;
 ?>
 <?php MyWidget::begin();?>
-	<h1>hello, world</h1>
+	<h1>привет, мир</h1>
 <?php MyWidget::end();
 	foreach ($cats as $c){
 		echo '<ul>';
