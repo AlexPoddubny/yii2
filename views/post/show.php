@@ -2,15 +2,13 @@
 <?php
 	use app\controllers\AppController;
 	use app\widgets\MyWidget;
-	
-	echo MyWidget::widget(['name' => 'Alex']);
-//	echo AppController::debug($cats);
-//	echo count($cats[0]->products);
-//	echo AppController::debug($cats);
+?>
+<?php MyWidget::begin();?>
+	<h1>hello, world</h1>
+<?php MyWidget::end();
 	foreach ($cats as $c){
 		echo '<ul>';
 			echo '<li>' . 'id: ' . $c->id . ': ' . $c->title . '</li>';
-//			$products = $c->products;
 			foreach ($c->products as $p){
 				echo '<ul>';
 					echo '<li>' . $p->title . '</li>';
