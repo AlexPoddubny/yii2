@@ -21,10 +21,10 @@
 //				return 'test';
 //			}
 			
-			$model = TestForm::findOne(7);
+			//$model = TestForm::findOne(7);
 //			AppController::debug($post);
 			
-			//$model = new TestForm();
+			$model = new TestForm();
 //
 //			$model->name = 'Автор';
 //			$model->email = 'mail@mail.com';
