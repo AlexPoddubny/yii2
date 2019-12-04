@@ -51,7 +51,7 @@ $config = [
             'rules' => [
 //            	'./' => 'index',
             	'posts' => 'post/',
-	            
+	            '<action:\w+>' => 'site/<action>',
             ],
         ],
         

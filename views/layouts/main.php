@@ -39,11 +39,11 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'Posts', 'url' => ['/post/']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => 'Posts', 'url' => ['/posts/']],
+            ['label' => 'About', 'url' => ['/about']],
+            ['label' => 'Contact', 'url' => ['/contact']],
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
+                ['label' => 'Login', 'url' => ['/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
